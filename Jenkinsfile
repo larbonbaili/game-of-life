@@ -13,7 +13,7 @@ pipeline {
        }
  
        stage ('Test') {
-           stops {
+           steps {
                sh "echo ${JAVA_HOME}"
            }
        }
