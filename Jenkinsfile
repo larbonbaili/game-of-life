@@ -15,7 +15,8 @@ pipeline {
  
        stage ('Test') {
            steps {
-               sh "echo "
+               sh "echo ${JAVA_HOME}"
+               sh "java -version"
            }
        }
    }
