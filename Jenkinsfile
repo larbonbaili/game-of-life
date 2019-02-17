@@ -7,15 +7,15 @@ pipeline {
    }
    stages {
        stage ('Build') {
-           //  steps {
+           steps {
                sh "pwd"
-           //  }
+           }
        }
  
        stage ('Test') {
-           //  steps {
-               sh "echo ${JAVA_HOME}"
-           //  }
+           steps {
+               sh "echo '${JAVA_HOME}'"
+           }
        }
    }
 }
