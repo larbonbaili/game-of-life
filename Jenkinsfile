@@ -1,3 +1,4 @@
+#!/bin/bash -ilex
 pipeline {
     agent {
         node {
@@ -14,7 +15,7 @@ pipeline {
  
        stage ('Test') {
            steps {
-               sh "echo '${JAVA_HOME}'"
+               sh "echo "
            }
        }
    }
