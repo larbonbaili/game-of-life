@@ -1,4 +1,4 @@
-peline {
+pipeline {
     agent {
         node {
             label ‘master’
@@ -7,12 +7,15 @@ peline {
    }
    stages {
        stage (‘Build’) {
-           sh “pwd”  //这个是Linux的执行
+           steps {
+               sh "pwd"
+           }
        }
  
        stage (‘Test’) {
-           sh “echo ${JAVA_HOME}”  //这个是Linux的执行
+           stops {
+               sh "echo ${JAVA_HOME}"
+           }
        }
- 
    }
 }
